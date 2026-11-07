@@ -4,7 +4,7 @@ A UTM created using Tuatara Turing Machine Simulator v2.1.
 
 ## Design
 
-This UTM is designed to use one tape. It can simulate the execution of any Turing Machine encoded in Code Word Language (CWL) with tape alphabet $\{a,b,\Delta,\#\}$ on any string over the language $\{a,b\}$.
+This UTM is designed to use one tape. It can simulate the execution of any Turing Machine encoded in Code Word Language (CWL) with tape alphabet $\\{a,b,\Delta,\\#\\}$ on any string over the language $\\{a,b\\}$.
 
 To use the UTM, set up the tape using the following structure: `ZeZZPx`, where `e` is an encoded Turing Machine, and $x$ is an input string.
 
@@ -22,12 +22,12 @@ A clause for each transition is constructed as follows:
   - $a\mapsto aa$
   - $b\mapsto ab$
   - $\Delta\mapsto ba$
-  - $\#\mapsto bb$
+  - $\\#\mapsto bb$
 - character to write
   - $a\mapsto aa$
   - $b\mapsto ab$
   - $\Delta\mapsto ba$
-  - $\#\mapsto bb$
+  - $\\#\mapsto bb$
 - move direction
   - $L\mapsto a$
   - $R\mapsto b$
