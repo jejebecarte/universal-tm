@@ -2,13 +2,23 @@
 
 A UTM created using Tuatara Turing Machine Simulator v2.1.
 
+This UTM can simulate the execution of any Turing Machine encoded in Code Word Language (CWL) with tape alphabet $\\{a,b,\Delta,\\#\\}$ on any string over the language $\\{a,b\\}$.
+
+To use the UTM, set up the tape using the following structure: $ZeZZPx\Delta\ldots$, where $e$ is an encoded Turing Machine, and $x$ is an input string.
+
+The UTM will halt if and only if the encoded simulated Turing Machine halts.
+
 ## Design
 
-This UTM is designed to use one tape. It can simulate the execution of any Turing Machine encoded in Code Word Language (CWL) with tape alphabet $\\{a,b,\Delta,\\#\\}$ on any string over the language $\\{a,b\\}$.
+Given the UTM is designed in Tuatara, it is subject to some restrictions:
 
-To use the UTM, set up the tape using the following structure: `ZeZZPx`, where `e` is an encoded Turing Machine, and $x$ is an input string.
+- It can be slow to simulate the execution of large Turing Machines
+- Individual parts of the UTM cannot be easily labelled or documented
+- Although the wildcard matcher $?$ is available, I have tended to match individual letters for clarity
+- Only one tape is availalble; it must use delimiters to separate sections of the input
+  - Using different delimiters instead of just $Z$ would help minimise the size of the UTM, but would increase the size of the tape alphabet
 
-The UTM will halt if and when the encoded simulated Turing Machine halts.
+Please open an [issue](https://github.com/jejebecarte/universal-tm/issues) if you discover any bugs.
 
 ### CWL
 
