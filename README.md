@@ -6,7 +6,7 @@ This UTM can simulate the execution of any Turing Machine encoded in Code Word L
 
 ## Input
 
-To use the UTM, set up the tape using the following structure: $ZeZZPx\Delta\ldots$, where $e$ is an encoded Turing Machine, and $x$ is an input string.
+To use the UTM, set up the tape using the following structure: $ZeZ\Delta\Delta ZPx\Delta\ldots$, where $e$ is an encoded Turing Machine, and $x$ is an input string.
 
 Note that unless the encoded turing machine starts on state 1 and ends on state 2, the UTM may produce undefined behaviour.
 
@@ -23,6 +23,7 @@ There are a number of obvious improvements which could be made:
 - The size of the UTM could be greatly reduced using the wildcard matcher `?` more liberally, in conjunction with a greater variety of characters in the tape alphabet so that the UTM can more easily skip to specific parts of the tape
   - I have tended to avoid using `?` for the sake of clarity, but whether this makes the UTM more readable is a matter of opinion
 - Currently, if the encoded TM crashes, the UTM crashes without cleaning up the tape; as a result, the encoded TM and current state indicator often contain tape alphabet symbols
+- Removing the need to have two blank spaces for the current state indicator in the input
 
 Please open an [issue](https://github.com/jejebecarte/universal-tm/issues) if you discover any bugs.
 
